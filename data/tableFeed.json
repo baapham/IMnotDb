@@ -1,0 +1,191 @@
+[
+    {
+        "Title": "Batman",
+        "Year": "1989",
+        "Rated": "PG-13",
+        "Released": "23 Jun 1989",
+        "Runtime": "126 min",
+        "Genre": "Action, Adventure",
+        "Director": "Tim Burton",
+        "Writer": "Bob Kane (Batman characters), Sam Hamm (story), Sam Hamm (screenplay), Warren Skaaren (screenplay)",
+        "Actors": "Michael Keaton, Jack Nicholson, Kim Basinger, Robert Wuhl",
+        "Plot": "The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker.",
+        "Language": "English, French, Spanish",
+        "Country": "USA, UK",
+        "Awards": "Won 1 Oscar. Another 8 wins & 26 nominations.",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "7.5/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "72%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "69/100"
+          }
+        ],
+        "Metascore": "69",
+        "imdbRating": "7.5",
+        "imdbVotes": "317,478",
+        "imdbID": "tt0096895",
+        "Type": "movie",
+        "DVD": "25 Mar 1997",
+        "BoxOffice": "N/A",
+        "Production": "Warner Bros. Pictures",
+        "Website": "N/A",
+        "Response": "True"
+    },
+    {
+        "Title": "Joker",
+        "Year": "2019",
+        "Rated": "R",
+        "Released": "04 Oct 2019",
+        "Runtime": "121 min",
+        "Genre": "Crime, Drama, Thriller",
+        "Director": "Todd Phillips",
+        "Writer": "Todd Phillips, Scott Silver",
+        "Actors": "Joaquin Phoenix, Robert De Niro, Zazie Beetz, Frances Conroy",
+        "Plot": "A gritty character study of Arthur Fleck, a man disregarded by society.",
+        "Language": "English",
+        "Country": "USA, Canada",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "9.1/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "77%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "58/100"
+          }
+        ],
+        "Metascore": "58",
+        "imdbRating": "9.1",
+        "imdbVotes": "87,202",
+        "imdbID": "tt7286456",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "Warner Bros. Pictures",
+        "Website": "N/A",
+        "Response": "True"
+    },
+    {
+        "Title": "Aladdin",
+        "Year": "1992",
+        "Rated": "G",
+        "Released": "25 Nov 1992",
+        "Runtime": "90 min",
+        "Genre": "Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance",
+        "Director": "Ron Clements, John Musker",
+        "Writer": "Ron Clements (screenplay by), John Musker (screenplay by), Ted Elliott (screenplay by), Terry Rossio (screenplay by), Burny Mattinson (story), Roger Allers (story), Daan Jippes (story), Kevin Harkey (story), Sue C. Nichols (story), Francis Glebas (story), Darrell Rooney (story), Larry Leker (story), James Fujii (story), Kirk Hanson (story), Kevin Lima (story), Rebecca Rees (story), David S. Smith (story), Chris Sanders (story), Brian Pimental (story), Patrick A. Ventura (story)",
+        "Actors": "Scott Weinger, Robin Williams, Linda Larkin, Jonathan Freeman",
+        "Plot": "A kindhearted street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make their deepest wishes come true.",
+        "Language": "English",
+        "Country": "USA",
+        "Awards": "Won 2 Oscars. Another 30 wins & 22 nominations.",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BY2Q2NDI1MjUtM2Q5ZS00MTFlLWJiYWEtNTZmNjQ3OGJkZDgxXkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.0/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "94%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "86/100"
+          }
+        ],
+        "Metascore": "86",
+        "imdbRating": "8.0",
+        "imdbVotes": "332,039",
+        "imdbID": "tt0103639",
+        "Type": "movie",
+        "DVD": "05 Oct 2004",
+        "BoxOffice": "N/A",
+        "Production": "Walt Disney Pictures",
+        "Website": "N/A",
+        "Response": "True"
+    },
+    {
+        "Title": "Dark Knight",
+        "Year": "2000–",
+        "Rated": "PG-13",
+        "Released": "01 Jul 2000",
+        "Runtime": "N/A",
+        "Genre": "Fantasy",
+        "Director": "N/A",
+        "Writer": "N/A",
+        "Actors": "Charlotte Comer, Ben Pullen, Peter O'Farrell, Cameron Rhodes",
+        "Plot": "Set in the dark ages, a time of fear, magic and mystery. Ancient evil is about to be unleashed on the land and the only hope is the sharp sword, the pure heart and the mysterious force that protects the 'Chosen One' Ivanhoe.",
+        "Language": "N/A",
+        "Country": "UK",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNWFjNzM0M2EtZDE4ZS00NDZlLTlhYjItNDhhNjgxODllYzdhXkEyXkFqcGdeQXVyNDUxNjc5NjY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "5.3/10"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "5.3",
+        "imdbVotes": "170",
+        "imdbID": "tt0251504",
+        "Type": "series",
+        "totalSeasons": "2",
+        "Response": "True"
+    },
+    {
+        "Title": "Avatar",
+        "Year": "2009",
+        "Rated": "PG-13",
+        "Released": "18 Dec 2009",
+        "Runtime": "162 min",
+        "Genre": "Action, Adventure, Fantasy, Sci-Fi",
+        "Director": "James Cameron",
+        "Writer": "James Cameron",
+        "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+        "Plot": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+        "Language": "English, Spanish",
+        "Country": "USA",
+        "Awards": "Won 3 Oscars. Another 85 wins & 128 nominations.",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "7.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "82%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "83/100"
+          }
+        ],
+        "Metascore": "83",
+        "imdbRating": "7.8",
+        "imdbVotes": "1,059,860",
+        "imdbID": "tt0499549",
+        "Type": "movie",
+        "DVD": "22 Apr 2010",
+        "BoxOffice": "$749,700,000",
+        "Production": "20th Century Fox",
+        "Website": "N/A",
+        "Response": "True"
+    }
+]
