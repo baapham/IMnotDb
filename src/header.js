@@ -1,6 +1,6 @@
 function initHeader () {
     let navigationContainer = document.createElement("div");
-    navigationContainer.className = "container";
+    navigationContainer.className = "container-fullwidth";
 
     let navigationBar = document.createElement("nav");
     navigationBar.className = "navbar navbar-expand-lg navbar-light bg-light";
@@ -24,7 +24,7 @@ function createLogo() {
     let logo = document.createElement("a");
     logo.className = "navbar-brand";
     logo.href = "#";
-    logo.innerText = "wsiw";
+    logo.innerText = "IMnotDB";
     return logo;
 }
 
@@ -87,33 +87,23 @@ function createCollapsableList () {
     let collapsableList = document.createElement("ul");
     collapsableList.className = "navbar-nav mr-auto";
    
-    let homeButton = createListItem("#", "Home", true, "nav-item");
-    collapsableList.appendChild(homeButton);
-
     let aboutButton = createListItem("#","About",true, "nav-item");
     collapsableList.appendChild(aboutButton);
 
-    let searchBox = createListItem(null, "Search", false, "form-inline my-2 my-lg-0");
-        let inputBox = document.createElement("input");
-        inputBox.className = "form-control mr-sm-2";
-        inputBox.type = "search";
-        inputBox.placeholder = "Search Movie";
-        inputBox.setAttribute("aria-label","Search Movie");
-        searchBox.appendChild(inputBox);
-
-        let searchButton = createButton("btn btn-outline-success my-2 my-sm-0", "Search");
-        searchButton.type = "submit"
-        searchBox.appendChild(searchButton);
-
-    collapsableList.appendChild(searchBox);
 
     collapsableListDiv.appendChild(collapsableList);
+    let searchButton = createButton("btn btn-outline-success my-2 my-sm-0", "Search");
 
-    let signupButton = createButton("btn btn-success", "Sign up");
-    collapsableListDiv.appendChild(signupButton);
+    let searchBox = createListItem(null, "Search", false, "form-inline my-2 my-lg-0");
+    let inputBox = document.createElement("input");
+    inputBox.className = "form-control mr-sm-2";
+    inputBox.type = "search";
+    inputBox.placeholder = "Search Movie";
+    inputBox.setAttribute("aria-label","Search Movie");
+    collapsableListDiv.appendChild(inputBox);
 
-    let loginButton = createButton("btn btn-light", "Login");
-    collapsableListDiv.appendChild(loginButton);
+    searchButton.type = "submit"
+    collapsableListDiv.appendChild(searchButton);
 
     return collapsableListDiv;
 }
