@@ -1,3 +1,5 @@
+import createModal from './modals';
+
 function initTable() {
     let root = document.getElementById("root");
     let responsiveTable = document.createElement("div");
@@ -6,12 +8,24 @@ function initTable() {
     rootTable.className = "table table-hover table-bordered mx-auto mt-5";
     rootTable.style = "width: 900px;";
     let tableHead = createTableHead("thead-dark", ["Movie", "Date", "Ratings"]);
-    let tableContent = createTableContent();
+    let tableBody = document.createElement("tbody");
     rootTable.appendChild(tableHead);
-    rootTable.appendChild(tableContent);
+    rootTable.appendChild(tableBody);
     root.appendChild(rootTable);
+    let i = 0;
+    const perPage = 19;
+    createTableContent(i, i + perPage, tableBody)
+    // simulates infinite scroll
+    window.onscroll = function() {
+        if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight && i <= 80) {
+            createTableContent(i, i + perPage, tableBody)
+            i += 20;
+        }
+    };
+    let modalContainer = document.createElement("div");
 }
 
+// creates the header of the table on the home page
 function createTableHead(classType, columnNames) {
     let head = document.createElement("thead");
     head.className = classType;
@@ -26,14 +40,18 @@ function createTableHead(classType, columnNames) {
     return head;
 }
 
-function createTableContent() {
-    let body = document.createElement("tbody");
+// initialises the top 100 movies on the home page
+// grabs this list from the json file in data folder
+function createTableContent(start, end, body) { 
     fetch("../data/top100.json")
     .then((r) => r.json())
     .then((r) => {
-        for (let movie of r) {
-            console.log(movie);
+        for (let i = start; i < end; i++) {
+            const movie = r[i];
             let movieRow = document.createElement("tr");
+            movieRow.setAttribute("style", "cursor: pointer");
+            movieRow.setAttribute("data-toggle", "modal");
+            movieRow.setAttribute("data-target", movie.imdbID);
             let movieTitle = document.createElement("th");
             movieTitle.setAttribute("scope", "row");
             movieTitle.innerText = movie.Title;
@@ -42,18 +60,16 @@ function createTableContent() {
             let movieRating = document.createElement("td");
             let ratingString = '';
             for (let rating of movie.Ratings) {
-                console.log(rating);
-                ratingString = ratingString + `${rating.Source}: ${rating.Value} `
+                ratingString = ratingString + `${rating.Source}: ${rating.Value}\n`
             }
-            movieRating.innerText = movie.ratingString;
-
+            movieRating.innerText = ratingString;
             movieRow.appendChild(movieTitle);
             movieRow.appendChild(movieDate);
             movieRow.appendChild(movieRating);
             body.appendChild(movieRow);
         }
     });
-    return body;
 }
+
 
 export default initTable;
