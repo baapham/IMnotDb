@@ -51,11 +51,11 @@ function createTableContent(start, end, body) {
     .then((r) => {
         for (let i = start; i < end; i++) {
             const movie = r[i];
-            console.log(movie);
+            // console.log(movie);
             let movieRow = document.createElement("tr");
             movieRow.setAttribute("style", "cursor: pointer");
             movieRow.setAttribute("data-toggle", "modal");
-            movieRow.setAttribute("data-target", movie.imdbID);
+            movieRow.setAttribute("data-target", `#${movie.imdbID}`);
             let movieTitle = document.createElement("th");
             movieTitle.setAttribute("scope", "row");
             movieTitle.innerText = movie.Title;
