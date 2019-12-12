@@ -1,4 +1,4 @@
-import createModal from './modals';
+import createModal from './modals.js';
 
 function initTable() {
     let root = document.getElementById("root");
@@ -12,6 +12,9 @@ function initTable() {
     rootTable.appendChild(tableHead);
     rootTable.appendChild(tableBody);
     root.appendChild(rootTable);
+    let modalContainer = document.createElement("div");
+    modalContainer.id = "modal-container";
+    root.appendChild(modalContainer);
     let i = 0;
     const perPage = 19;
     createTableContent(i, i + perPage, tableBody)
@@ -22,7 +25,7 @@ function initTable() {
             i += 20;
         }
     };
-    let modalContainer = document.createElement("div");
+    
 }
 
 // creates the header of the table on the home page
@@ -48,6 +51,7 @@ function createTableContent(start, end, body) {
     .then((r) => {
         for (let i = start; i < end; i++) {
             const movie = r[i];
+            console.log(movie);
             let movieRow = document.createElement("tr");
             movieRow.setAttribute("style", "cursor: pointer");
             movieRow.setAttribute("data-toggle", "modal");
@@ -67,6 +71,7 @@ function createTableContent(start, end, body) {
             movieRow.appendChild(movieDate);
             movieRow.appendChild(movieRating);
             body.appendChild(movieRow);
+            createModal(movie);
         }
     });
 }
