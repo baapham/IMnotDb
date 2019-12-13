@@ -3,7 +3,7 @@ function initHeader () {
     navigationContainer.className = "container-fullwidth";
 
     let navigationBar = document.createElement("nav");
-    navigationBar.className = "navbar navbar-expand-lg navbar-light bg-light";
+    navigationBar.className = "navbar fixed-top navbar-expand-lg navbar-light bg-light";
     
     let logo = createLogo();
     navigationBar.appendChild(logo);

@@ -133,21 +133,32 @@ function createModalContainerRHS(movie) {
     let ratingsTitle = document.createElement("li");
     ratingsTitle.className = "list-group-item active";
     ratingsTitle.innerText = "Ratings";
-    let imdbRating = document.createElement("li");
-    imdbRating.className = "list-group-item";
-    imdbRating.innerText = `IMDb: ${movie.Ratings[0].Value}`;
-    let rtRating = document.createElement("li");
-    rtRating.className = "list-group-item";
-    rtRating.innerText = `Rotten Tomatoes: ${movie.Ratings[1].Value}`;
-    let mcRating = document.createElement("li");
-    mcRating.className = "list-group-item";
-    mcRating.innerText = `Metacritic: ${movie.Ratings[2].Value}`;
-
+    ratingsList.appendChild(ratingsTitle);
+    if (movie.Ratings[0]) {
+        let imdbRating = document.createElement("li");
+        imdbRating.className = "list-group-item";
+        imdbRating.innerText = `IMDb: ${movie.Ratings[0].Value}`;
+        ratingsList.appendChild(imdbRating);
+    }
+    if (movie.Ratings[1]) {
+        let rtRating = document.createElement("li");
+        rtRating.className = "list-group-item";
+        rtRating.innerText = `Rotten Tomatoes: ${movie.Ratings[1].Value}`;
+        ratingsList.appendChild(rtRating);
+    }
+    if (movie.Ratings[2]) {
+        let mcRating = document.createElement("li");
+        mcRating.className = "list-group-item";
+        mcRating.innerText = `Metacritic: ${movie.Ratings[2].Value}`;
+        ratingsList.appendChild(mcRating);
+    }
+    
     let genresList = document.createElement("ul");
     genresList.className = "list-group mb-3";
     let genresTitle = document.createElement("li");
     genresTitle.className = "list-group-item active";
     genresTitle.innerText = "Genres";
+    genresList.appendChild(genresTitle);
     let genreArray = movie.Genre.split(", ");
     for (let g of genreArray) {
         let genre = document.createElement("li");
@@ -158,12 +169,12 @@ function createModalContainerRHS(movie) {
 
     modalDescriptionRHS.appendChild(description);
     modalDescriptionRHS.appendChild(descriptionText);
-    ratingsList.appendChild(ratingsTitle);
-    ratingsList.appendChild(imdbRating);
-    ratingsList.appendChild(rtRating);
-    ratingsList.appendChild(mcRating);
+    
+    
+    
+    
 
-    ratingsList.appendChild(genresTitle);
+    
     modalDescriptionRHS.appendChild(ratingsList);
     modalDescriptionRHS.appendChild(genresList);
     return modalDescriptionRHS;

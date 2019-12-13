@@ -49,7 +49,7 @@ function createTableContent(start, end, body) {
     fetch("../data/top100.json")
     .then((r) => r.json())
     .then((r) => {
-        for (let i = start; i < end; i++) {
+        for (let i = start; i <= end; i++) {
             const movie = r[i];
             // console.log(movie);
             let movieRow = document.createElement("tr");
