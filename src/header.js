@@ -86,26 +86,35 @@ function createCollapsableList () {
     // Creates un-ordered list
     let collapsableList = document.createElement("ul");
     collapsableList.className = "navbar-nav mr-auto";
-   
-    let aboutButton = createListItem("#","About",true, "nav-item");
-    collapsableList.appendChild(aboutButton);
-
 
     collapsableListDiv.appendChild(collapsableList);
     let searchButton = createButton("btn btn-outline-success my-2 my-sm-0", "Search");
 
     let searchBox = createListItem(null, "Search", false, "form-inline my-2 my-lg-0");
+    let formSearch = document.createElement("form");
+    formSearch.addEventListener("submit", handleSearch);
+
     let inputBox = document.createElement("input");
+    inputBox.id = "searchMovie";
     inputBox.className = "form-control mr-sm-2";
     inputBox.type = "search";
     inputBox.placeholder = "Search Movie";
     inputBox.setAttribute("aria-label","Search Movie");
-    collapsableListDiv.appendChild(inputBox);
+    formSearch.appendChild(inputBox);
 
     searchButton.type = "submit"
-    collapsableListDiv.appendChild(searchButton);
+    formSearch.appendChild(searchButton);
 
+    searchBox.appendChild(formSearch);
+
+    collapsableListDiv.appendChild(searchBox);
     return collapsableListDiv;
+}
+
+function handleSearch(event) {
+    event.preventDefault();
+    let searchQuery = document.getElementById("searchMovie");
+    console.log(searchQuery.value);
 }
 
 export default initHeader;
