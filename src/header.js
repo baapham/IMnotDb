@@ -1,4 +1,4 @@
-function initHeader () {
+function initHeader (OMDB_API_KEY) {
     let navigationContainer = document.createElement("div");
     navigationContainer.className = "container-fullwidth";
 
