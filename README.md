@@ -13,9 +13,12 @@ So what's different?
 
 An MVP has been released and currently viewable in the demo below!
 
+## Screenshots
+
+![image](https://github.com/baapham/IMnotDb/blob/master/assets/IMnotDb.png?raw=true)
 ## Demo
 
-Coming soon...
+https://alex-pham.com/IMnotDb/
 
 ## Built With
 * Javascript
