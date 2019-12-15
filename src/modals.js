@@ -82,36 +82,44 @@ function createModalContainerLHS(movie) {
     poster.className = "img-fluid mb-3";
 
     let director = document.createElement("h6");
-    director.innerText = "Directors"
+    director.innerText = "Director"
     let directorText = document.createElement("p");
     directorText.innerText = movie.Director;
 
-    let writers = document.createElement("h6");
-    writers.innerText = "Writers"
-    let writersText = document.createElement("p");
-    writersText.innerText = movie.Writer;
+    let boxOffice = document.createElement("h6");
+    boxOffice.innerText = "Box Office"
+    let boxOfficeText = document.createElement("p");
+    boxOfficeText.innerText = movie.BoxOffice;
 
-    let stars = document.createElement("h6");
-    stars.innerText = "Stars"
-    let starsText = document.createElement("p");
-    starsText.innerText = movie.Actors;
+    let prod = document.createElement("h6");
+    prod.innerText = "Production"
+    let prodText = document.createElement("p");
+    prodText.innerText = movie.Production;
 
     let classification = document.createElement("h6");
     classification.innerText = "Classification"
     let classificationText = document.createElement("p");
     classificationText.innerText = movie.Rated;
 
+    let runtime = document.createElement("h6");
+    runtime.innerText = "Runtime"
+    let runtimeText = document.createElement("p");
+    runtimeText.innerText = movie.Runtime;
+
     let releaseDate = document.createElement("h6");
     releaseDate.innerText = "Release Date"
     let releaseDateText = document.createElement("p");
+
     releaseDateText.innerText = movie.Released;
     modalDescriptionLHS.appendChild(poster);
+    modalDescriptionLHS.appendChild(prod);
+    modalDescriptionLHS.appendChild(prodText);
     modalDescriptionLHS.appendChild(director);
     modalDescriptionLHS.appendChild(directorText);
-    modalDescriptionLHS.appendChild(writers);
-    modalDescriptionLHS.appendChild(writersText);
-    modalDescriptionLHS.appendChild(stars);
-    modalDescriptionLHS.appendChild(starsText);
+    modalDescriptionLHS.appendChild(boxOffice);
+    modalDescriptionLHS.appendChild(boxOfficeText);
+    modalDescriptionLHS.appendChild(runtime);
+    modalDescriptionLHS.appendChild(runtimeText);
     modalDescriptionLHS.appendChild(classification);
     modalDescriptionLHS.appendChild(classificationText);
     modalDescriptionLHS.appendChild(releaseDate);
@@ -153,31 +161,34 @@ function createModalContainerRHS(movie) {
         ratingsList.appendChild(mcRating);
     }
     
-    let genresList = document.createElement("ul");
-    genresList.className = "list-group mb-3";
-    let genresTitle = document.createElement("li");
-    genresTitle.className = "list-group-item active";
-    genresTitle.innerText = "Genres";
-    genresList.appendChild(genresTitle);
-    let genreArray = movie.Genre.split(", ");
-    for (let g of genreArray) {
-        let genre = document.createElement("li");
-        genre.className = "list-group-item";
-        genre.innerText = g;
-        genresList.appendChild(genre);
-    }
+    let genresList = createList("Genres", movie, "Genre"); 
+    let writersList = createList("Writers", movie, "Writer");
+    let starsList = createList("Stars", movie, "Actors");
 
     modalDescriptionRHS.appendChild(description);
     modalDescriptionRHS.appendChild(descriptionText);
-    
-    
-    
-    
-
-    
     modalDescriptionRHS.appendChild(ratingsList);
     modalDescriptionRHS.appendChild(genresList);
+    modalDescriptionRHS.appendChild(writersList);
+    modalDescriptionRHS.appendChild(starsList);
     return modalDescriptionRHS;
+}
+
+function createList(title, movie, type) {
+    let list = document.createElement("ul");
+    list.className = "list-group mb-3";
+    let listTitle = document.createElement("li");
+    listTitle.className = "list-group-item active";
+    listTitle.innerText = title;
+    list.appendChild(listTitle);
+    let listArray = movie[type].split(", ");
+    for (let i of listArray) {
+        let item = document.createElement("li");
+        item.className = "list-group-item";
+        item.innerText = i;
+        list.appendChild(item);
+    }
+    return list;
 }
 
 // creates the footer of the modal

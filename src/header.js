@@ -1,4 +1,7 @@
-function initHeader (OMDB_API_KEY) {
+import { createSearchTableContent, createTableContent } from './table.js';
+import OMDB_API_KEY from '../.env.js';
+
+function initHeader () {
     let navigationContainer = document.createElement("div");
     navigationContainer.className = "container-fullwidth";
 
@@ -23,8 +26,9 @@ function initHeader (OMDB_API_KEY) {
 function createLogo() {
     let logo = document.createElement("a");
     logo.className = "navbar-brand";
-    logo.href = "#";
-    logo.innerText = "IMnotDB";
+    logo.innerText = "IMnotDb";
+    logo.setAttribute("style", "cursor: pointer");
+    logo.addEventListener("click", () => createTableContent(document.getElementById("tableBody")));
     return logo;
 }
 
@@ -114,7 +118,8 @@ function createCollapsableList () {
 function handleSearch(event) {
     event.preventDefault();
     let searchQuery = document.getElementById("searchMovie");
-    console.log(searchQuery.value);
+    createSearchTableContent(searchQuery.value);
+    // console.log(searchQuery.value);
 }
 
 export default initHeader;
