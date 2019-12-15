@@ -49,12 +49,20 @@ function createTableContent(body) {
     if (error) {
         error.parentNode.removeChild(error);
     }
+    let wrapper = document.createElement("div");
+    wrapper.className = "d-flex justify-content-center";
+    let loading = document.createElement("img");
+    loading.id = "loadingImage";
+    loading.src="../assets/loader.gif";
+    wrapper.appendChild(loading);
+    document.getElementById("root").appendChild(wrapper);
     fetch("../data/top100.json")
     .then((r) => r.json())
     .then((r) => {
         for (let movie of r) {
             createMovieRow(movie, body);
         }
+        loading.style.display = "none";
     });
 }
 
@@ -65,6 +73,8 @@ function createSearchTableContent(movieSearch) {
     while (body.firstChild) {
         body.removeChild(body.firstChild);
     }
+    let loading = document.getElementById("loadingImage");
+    loading.style.display = "inline";
     const api = `http://www.omdbapi.com/?apikey=${OMDB_API_KEY}`;
     fetch(`${api}&s=${movieSearch}&type=movie`)
     .then((r) => r.json())
@@ -94,6 +104,7 @@ function createSearchTableContent(movieSearch) {
                 })
             }
         }
+        loading.style.display = "none";
     });
 }
 
