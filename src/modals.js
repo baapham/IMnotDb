@@ -77,9 +77,12 @@ function createModalContainerLHS(movie) {
     let modalDescriptionLHS = document.createElement("div");
     modalDescriptionLHS.className = "col";
 
-    let poster = document.createElement("img");
-    poster.src = movie.Poster;
-    poster.className = "img-fluid mb-3";
+    if (movie.Poster !== "N/A"){
+        let poster = document.createElement("img");
+        poster.src = movie.Poster;
+        poster.className = "img-fluid mb-3";
+        modalDescriptionLHS.appendChild(poster);
+    }
 
     let director = document.createElement("h6");
     director.innerText = "Director"
@@ -111,7 +114,6 @@ function createModalContainerLHS(movie) {
     let releaseDateText = document.createElement("p");
 
     releaseDateText.innerText = movie.Released;
-    modalDescriptionLHS.appendChild(poster);
     modalDescriptionLHS.appendChild(prod);
     modalDescriptionLHS.appendChild(prodText);
     modalDescriptionLHS.appendChild(director);
