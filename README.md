@@ -9,6 +9,9 @@ So what's different?
 * It seeks to provide alternative/more information than the actual website (I know right whaaaaaa?). For example, I have included ratings across 3 platforms, IMDb, Rotten tomatoes and Metacritic.
 * Also it's blue and not yellow
 
+## Project Status
+
+An MVP has been released and currently viewable in the demo below!
 
 ## Demo
 
