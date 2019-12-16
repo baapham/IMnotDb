@@ -80,16 +80,18 @@ function createSearchTableContent(movieSearch) {
     .then((r) => r.json())
     .then((r) => {
         if (r.Response === "False") {
-            let wrapper = document.createElement("div");
-            wrapper.className = "d-flex justify-content-center";
-            wrapper.id = "noMovieError"
-            let noMovieError = document.createElement("div");
-            noMovieError.className = "alert alert-danger";
-            noMovieError.setAttribute("role", "alert");
-            noMovieError.style = "width: 900px;";
-            noMovieError.innerText = "There is no movie under that name, please try something else.";
-            wrapper.appendChild(noMovieError);
-            document.getElementById("root").appendChild(wrapper);
+            if (!document.getElementById("noMovieError")) {
+                let wrapper = document.createElement("div");
+                wrapper.className = "d-flex justify-content-center";
+                wrapper.id = "noMovieError"
+                let noMovieError = document.createElement("div");
+                noMovieError.className = "alert alert-danger";
+                noMovieError.setAttribute("role", "alert");
+                noMovieError.style = "width: 900px;";
+                noMovieError.innerText = "There is no movie under that name, please try something else.";
+                wrapper.appendChild(noMovieError);
+                document.getElementById("root").appendChild(wrapper);
+            }   
         }
         else {
             let error = document.getElementById("noMovieError");
