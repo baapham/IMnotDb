@@ -1,3 +1,7 @@
+## Demo
+
+https://alex-pham.com/IMnotDb/
+
 # IMnotDb
 
 A clone of IMDb...
@@ -16,9 +20,6 @@ An MVP has been released and currently viewable in the demo below!
 ## Screenshots
 
 ![image](https://github.com/baapham/IMnotDb/blob/master/assets/IMnotDb.png?raw=true)
-## Demo
-
-https://alex-pham.com/IMnotDb/
 
 ## Built With
 * Javascript
