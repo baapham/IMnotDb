@@ -1,8 +1,8 @@
-## Demo
 
-https://alex-pham.com/IMnotDb/
 
 # IMnotDb
+
+## About
 
 A clone of IMDb...
 
@@ -16,6 +16,10 @@ So what's different?
 ## Project Status
 
 An MVP has been released and currently viewable in the demo below!
+
+## Demo
+
+https://alex-pham.com/IMnotDb/
 
 ## Screenshots
 
