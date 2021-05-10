@@ -19,7 +19,7 @@ An MVP has been released and currently viewable in the demo below!
 
 ## Demo
 
-https://alex-pham.com/IMnotDb/
+https://imnotdb.alex-pham.com/
 
 ## Screenshots
 
